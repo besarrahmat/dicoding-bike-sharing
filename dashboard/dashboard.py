@@ -55,7 +55,9 @@ def create_hourly_users_df(df):
     return hourly_users_df
 
 
-df = pd.read_csv("hour_cleaned.csv")
+df = pd.read_csv(
+    "https://raw.githubusercontent.com/besarrahmat/dicoding-bike-sharing/main/dashboard/hour_cleaned.csv"
+)
 df.reset_index(inplace=True)
 df["dteday"] = pd.to_datetime(df["dteday"])
 
